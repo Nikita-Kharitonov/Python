@@ -1,0 +1,39 @@
+# Задача 30: Заполните массив элементами арифметической прогрессии. Её первый элемент, 
+# разность и количество элементов нужно ввести с клавиатуры.
+# Формула для получения n-го члена прогрессии: an = a1 + (n-1) * d.
+# Каждое число вводится с новой строки.
+
+# def progression(a, n, d): 
+#     list_1 = list()
+#     for i in range(n):
+#         list_1.append(a + i * d)
+#     return list_1
+
+# a = int(input('Первое число арифметической прогрессии : '))
+# d = int(input('Шаг прогрессии : '))
+# n = int(input('Колличество элементов: '))
+
+# print(progression(a, n, d))
+
+# Задача 32. Определить индексы элементов массива (списка), значения которых принадлежат заданному диапазону
+# (т.е. не меньше заданного минимума и не больше заданного максимума)
+
+def fill_array(n):
+    print('Введите элементы')
+    list_1 = list()
+    for i in range(n):
+        a = int(input())
+        list_1.append(a)    
+    return(list_1)
+
+def show_index(list_1, min, max):
+    list_3= list()
+    for i in range(len(list_1)):
+        if list_1[i] > min and list_1[i] < max:
+            list_3.append(i)
+    print(list_3)            
+
+n = int(input('Колличество элементов списка: '))
+min = int(input('Минимум: '))
+max = int(input('Максимум: '))
+show_index(fill_array(n), min, max)
